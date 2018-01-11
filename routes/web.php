@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/
+Route::group(['namespace'=>'Admin'],function (){
+    Route::get('article','ArticleController@index');
+    Route::get('/','IndexController@index');
 });
